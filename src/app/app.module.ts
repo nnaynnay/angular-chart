@@ -4,17 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { ChartDataService } from './data/chart-data.service';
+import { DonutChartComponent } from './donut-chart/donut-chart.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DonutChartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    ChartDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
